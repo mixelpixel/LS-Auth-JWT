@@ -7,6 +7,5 @@ const signIn = (req, res) => {
 };
 
 module.exports = (app) => {
-  app.post('/signup', signUp);
-  app.post('/signin', signIn);
+  app.post('/login', requireSignIn, signIn);
 };
